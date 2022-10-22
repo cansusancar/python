@@ -1,0 +1,17 @@
+vize= float(input('vize notunuz: '))
+final= float(input('final notunuz:'))
+ortalama= vize*0.4+ final*0.6
+
+if(ortalama>=0) and (ortalama<25):
+    print(f'ortalamanız: {ortalama} notunuz:FF')
+elif(ortalama>=25) and (ortalama<50):
+    print(f' ortalamanız: {ortalama} notunuz: DD')
+elif(ortalama>=50) and (ortalama<70):
+    print(f' ortalamanız: {ortalama} notunuz: CC') 
+elif(ortalama>=70) and (ortalama<90):
+    print(f' ortalamanız: {ortalama} notunuz: BB') 
+elif(ortalama>=90) and (ortalama<=100):
+    print(f' ortalamanız: {ortalama} notunuz: AA') 
+else:
+    print('hata')
+    
