@@ -1,0 +1,61 @@
+alisveris_listesi = []
+urun=[]
+
+def menu():
+    print('ne alacaksınız?')
+    print("""
+   urun girilmesini durdurmak icin 'BITTI' 
+   menuyu tekrar görmek icin 'MENU' 
+   listeyi tekrar goruntulemek icin'GOSTER' 
+"""
+  )
+
+
+def listeye_ekle(urun_ismi):
+    alisveris_listesi.append(urun_ismi)
+    fiyat =input("urunun fiyati:")
+    adet = input("urun adedi:")
+    urun.append(
+        {
+       'urununismi': urun_ismi,
+       'urununfiyati':fiyat,
+       'urununadedi':adet
+    
+        }
+ 
+    
+    
+    )
+    print('{} listenize eklendi!'.format(urun_ismi))
+    print('Listenizde {} eleman var .'.format(len(alisveris_listesi)))
+
+
+
+def listeyi_goster():
+    print('Liste:')
+    for k in alisveris_listesi:
+        print(k)
+
+
+
+menu()
+
+while True:
+    yeni_urun = input('> ')
+
+   
+    if yeni_urun == 'BITTI':
+        break
+
+    elif yeni_urun == 'MENU':
+        menu()
+        continue
+   
+    elif yeni_urun == 'GOSTER':
+        listeyi_goster()
+        continue
+
+    
+    listeye_ekle(yeni_urun)
+
+listeyi_goster()
